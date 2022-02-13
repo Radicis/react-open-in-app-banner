@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { OpenInAppBanner } from '../components';
+import { OpenInAppBanner } from '../src/components';
 import { action } from '@storybook/addon-actions';
 import TransparentIconSrc from './transparent-icon.png';
 
@@ -55,6 +55,35 @@ export const Default = () => {
   return (
     <Wrapper>
       <OpenInAppBanner
+        showOnWeb
+        appName="Example App"
+        bannerDescription="Hey you! Get our app!"
+        playStoreAppId="1234"
+        appStoreAppId="1234"
+        appStoreAppName="1234"
+        onOpenStoreLink={action('open')}
+      />
+      <div
+        style={{
+          padding: '10px',
+          position: 'absolute',
+          bottom: 0,
+          fontSize: '12px'
+        }}
+      >
+        User agent: {navigator.userAgent}
+      </div>
+    </Wrapper>
+  );
+};
+
+export const OnlyOnMobile = () => {
+  // Clear localstorage
+  localStorage.removeItem('hideOpenInAppBanner');
+
+  return (
+    <Wrapper>
+      <OpenInAppBanner
         appName="Example App"
         bannerDescription="Hey you! Get our app!"
         playStoreAppId="1234"
@@ -83,6 +112,7 @@ export const WithIcon = () => {
   return (
     <Wrapper>
       <OpenInAppBanner
+        showOnWeb
         appName="Example App"
         bannerDescription="Hey you! Get our app!"
         appIcon={
@@ -97,16 +127,6 @@ export const WithIcon = () => {
         appStoreAppName="1234"
         onOpenStoreLink={action('open')}
       />
-      <div
-        style={{
-          padding: '10px',
-          position: 'absolute',
-          bottom: 0,
-          fontSize: '12px'
-        }}
-      >
-        User agent: {navigator.userAgent}
-      </div>
     </Wrapper>
   );
 };
@@ -118,6 +138,7 @@ export const BigAndBordered = () => {
   return (
     <Wrapper>
       <OpenInAppBanner
+        showOnWeb
         openButtonLabel="OPEN APP"
         appName="Example App"
         bannerDescription="Hey you! Get our app!"
@@ -135,16 +156,6 @@ export const BigAndBordered = () => {
         style={{ borderBottom: '2px solid #ccc' }}
         onOpenStoreLink={action('open')}
       />
-      <div
-        style={{
-          padding: '10px',
-          position: 'absolute',
-          bottom: 0,
-          fontSize: '12px'
-        }}
-      >
-        User agent: {navigator.userAgent}
-      </div>
     </Wrapper>
   );
 };
@@ -156,6 +167,7 @@ export const LongContent = () => {
   return (
     <Wrapper>
       <OpenInAppBanner
+        showOnWeb
         openButtonLabel="OPEN APP"
         appName="Example App by the Long Company"
         bannerDescription="Hey you! Get our app! No really... You NEED this app!"
@@ -164,16 +176,6 @@ export const LongContent = () => {
         appStoreAppName="1234"
         onOpenStoreLink={action('open')}
       />
-      <div
-        style={{
-          padding: '10px',
-          position: 'absolute',
-          bottom: 0,
-          fontSize: '12px'
-        }}
-      >
-        User agent: {navigator.userAgent}
-      </div>
     </Wrapper>
   );
 };

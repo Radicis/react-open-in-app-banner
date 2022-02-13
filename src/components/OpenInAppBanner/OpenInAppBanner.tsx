@@ -8,6 +8,8 @@ import {
 const webviewRegExp = new RegExp('(' + userAgentStrings.join('|') + ')', 'ig');
 
 type Props = {
+  /** We want to be able to show this on desktop for testing purposes (it won't populate the store link though  */
+  showOnWeb?: boolean;
   /** Optional Hex color to use as the button color */
   buttonColor?: string;
   /** Optional open store handler to override the window.location default */
@@ -40,6 +42,7 @@ type Props = {
 };
 
 const OpenInAppBanner = ({
+  showOnWeb,
   buttonColor = '#1ea7fd',
   onOpenStoreLink,
   appIcon,
@@ -113,6 +116,8 @@ const OpenInAppBanner = ({
           playStoreBaseHref || defaultPlayStoreBaseHref
         }/details?id=${playStoreAppId}`
       );
+      setShowBanner(true);
+    } else if (showOnWeb) {
       setShowBanner(true);
     } else {
       setShowBanner(false);
