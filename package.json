@@ -1,5 +1,5 @@
 {
-  "name": "react-open-app-banner",
+  "name": "react-open-in-app-banner",
   "version": "1.0.1",
   "description": "A React component for displaying a banner to prompt your users to open the wbe app in a native app when a mobile user agent is detected",
   "main": "dist/cjs/index.js",
