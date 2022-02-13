@@ -1,7 +1,7 @@
 # react-open-in-app-banner
 
-![Example1](https://github.com/Radicis/react-open-in-app-banner/media/example1.webp)
-![Example2](https://github.com/Radicis/react-open-in-app-banner/media/example2.webp)
+![Example1](https://raw.githubusercontent.com/Radicis/react-open-in-app-banner/main/media/example1.webp)
+![Example2](https://raw.githubusercontent.com/Radicis/react-open-in-app-banner/main/media/example2.webp)
 
 ## Storybook Demo
 
