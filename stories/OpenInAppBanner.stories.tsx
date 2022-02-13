@@ -194,6 +194,7 @@ export const Interactive = (args: {
   return (
     <Wrapper>
       <OpenInAppBanner
+        showOnWeb
         appName={appName}
         bannerDescription={bannerDescription}
         openButtonLabel={openButtonLabel}
