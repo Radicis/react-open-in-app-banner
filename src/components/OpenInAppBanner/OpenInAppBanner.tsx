@@ -152,6 +152,7 @@ const OpenInAppBanner = ({
         >
           <button
             className="open-in-app-banner-close-button"
+            data-testid="open-in-app-banner-close-button"
             onClick={hideBanner}
             type="button"
             aria-label="Close Banner"
@@ -174,9 +175,9 @@ const OpenInAppBanner = ({
               }}
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M6 18L18 6M6 6l12 12"
               />
             </svg>
@@ -190,11 +191,22 @@ const OpenInAppBanner = ({
               flexGrow: 1
             }}
           >
-            <span style={{ fontWeight: 600, fontSize: '1em' }}>{appName}</span>
-            <span style={{ fontSize: '0.85em' }}>{bannerDescription}</span>
+            <span
+              data-testid="open-in-app-banner-app-name"
+              style={{ fontWeight: 600, fontSize: '1em' }}
+            >
+              {appName}
+            </span>
+            <span
+              data-testid="open-in-app-banner-description"
+              style={{ fontSize: '0.85em' }}
+            >
+              {bannerDescription}
+            </span>
           </div>
           <button
             className="open-in-app-banner-open-button"
+            data-testid="open-in-app-banner-open-button"
             type="button"
             onClick={openStoreLink}
             aria-label="Open in App"

@@ -1,4 +1,5 @@
 node_modules/
 .idea
-/src/tailwind.css
-src/*.spec.js
+src/*.test.js
+**/*.test.tsx
+stories/

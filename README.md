@@ -21,6 +21,8 @@ yarn add react-open-in-app-banner
 ## Usage
 
 ```JavaScript
+import { OpenInAppBanner } from 'react-open-in-app-banner';
+
 <OpenInAppBanner
   appName="Example App"
   bannerDescription="Hey you! Get our app!"
