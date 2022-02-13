@@ -1,5 +1,7 @@
 # react-open-in-app-banner
 
+![MIT](https://img.shields.io/github/license/Radicis/react-open-in-app-banner)
+
 A React component for displaying a banner to prompt your users to open the wbe app in a native app when a mobile user
 agent is detected
 

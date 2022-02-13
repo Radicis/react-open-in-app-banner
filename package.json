@@ -9,7 +9,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "gh-pages -d storybook-static",
-    "test": "jest -- --coverage"
+    "test": "jest --coverage"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
