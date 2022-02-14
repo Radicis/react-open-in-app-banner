@@ -20,7 +20,7 @@ npm install react-open-in-app-banner
 yarn add react-open-in-app-banner
 ```
 
-## Usage
+## Usage as a Component
 
 ```JavaScript
 import { OpenInAppBanner } from 'react-open-in-app-banner';
@@ -59,4 +59,18 @@ import { OpenInAppBanner } from 'react-open-in-app-banner';
   appStoreBaseHref="something" // We can override the base Apple App store href
   playStoreBaseHref="something" // We can override the base Google Play store href
 />
+```
+
+
+## Usage as a headless hook
+
+```JavaScript
+  const { hideBanner, showBanner, storeLink } = useOpenInAppBanner({
+      showOnWeb: true,
+      playStoreAppId: '1234', // Available for testing to show in desktop useragents
+      appStoreAppId: '1234',
+      appStoreAppName: '1234',
+      appStoreBaseHref: "something", // We can override the base Apple App store href
+      playStoreBaseHref: "something" // We can override the base Google Play store href
+});
 ```
